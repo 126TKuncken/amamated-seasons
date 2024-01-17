@@ -127,31 +127,62 @@ section .set div:nth-child(8) {
     filter: blur(2px);
 }
 
-/* Stolen CSS for buttons :) */
-.button_slide {
-    color: #FFF;
-    border: 2px solid rgb(216, 2, 134);
-    border-radius: 0px;
-    padding: 18px 36px;
-    display: inline-block;
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 14px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 #D80286;
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    transition: ease-out 0.4s;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.slide_down:hover {
-    box-shadow: inset 0 100px 0 0 #D80286;
+body {
+min-height: 100vh;
+background-image: url(img/Bag-of-baseballs.webp);
+background-size: cover;
+background-position: center;
 }
 
-.slide_right:hover {
-    box-shadow: inset 400px 0 0 0 #D80286;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 35px;
+    color: #78de5f;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-.slide_diagonal:hover {
-    box-shadow: inset 400px 50px 0 0 #D80286;
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a ::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: #5500fd;
+    transition: 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 100%; 
 }
