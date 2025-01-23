@@ -140,7 +140,6 @@ section .set div:nth-child(8) {
 
 body {
 min-height: 100vh;
-background-image: url(img/Bag-of-baseballs.webp);
 background-size: cover;
 background-position: center;
 }
